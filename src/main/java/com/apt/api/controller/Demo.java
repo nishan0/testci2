@@ -9,6 +9,6 @@ public class Demo {
     // create GET endpoint to serve demo data at /demo/data
     @GetMapping(value = "/data")
     public String getDemoData() {
-        return "Demo Data";
+        return "Demo Data 4";
     }
 }
