@@ -13,9 +13,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    
+    runs-on: ubuntu-latest    
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -31,7 +29,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build the tagged Docker image
-        run: docker build . --file src/Dockerfile --tag gitTest:latest
+        run: docker build . --file src/Dockerfile --tag spider-nish/gitTest:latest
       - name: Push Docker image    
         run: docker push ${{ secrets.DOCKER_USERNAME }}/spider-nish      
   
