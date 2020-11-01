@@ -31,4 +31,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build the tagged Docker image
-        run: docker build . --file src/Dockerfile      
+        run: docker build . --file src/Dockerfile
+      - name: Push Docker image    
+        run: docker push nishan00/spider-nish:tagname
+  
