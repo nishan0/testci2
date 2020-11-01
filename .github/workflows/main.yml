@@ -31,6 +31,6 @@ jobs:
       - name: Build the tagged Docker image
         run: docker build . --file src/Dockerfile --tag spider-nish
       - name: Push Docker image    
-        run: docker push https://hub.docker.com/repository/docker/nishan00/spider-nish spider-nish      
+        run: docker push nishan00/spider-nish:spider-nish      
   
   
