@@ -29,8 +29,8 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build the tagged Docker image
-        run: docker build . --file src/Dockerfile --tag nishan00/spider-nish/spider:version1.0
+        run: docker build . --file src/Dockerfile --tag nishan00/spider-nish/spider-version1.0
       - name: Push Docker image    
-        run: docker push nishan00/spider-nish/spider:version1.0      
+        run: docker push nishan00/spider-nish:spider-version1.0      
   
   
