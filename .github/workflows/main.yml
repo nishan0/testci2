@@ -31,6 +31,6 @@ jobs:
       - name: Build the tagged Docker image
         run: docker build . --file src/Dockerfile --tag spider-nish
       - name: Push Docker image    
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/spider-nish      
+        run: docker push spider-nish      
   
   
